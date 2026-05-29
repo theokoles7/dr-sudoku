@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+// --------------------------------------------------------- FONTS
+@font-face {
+  font-family: logo;
+  src: url("../public/fonts/logo.ttf") format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: primary;
+  src: url("../public/fonts/primary.ttf") format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: secondary;
+  src: url("../public/fonts/secondary.ttf") format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: lcd;
+  src: url("../public/fonts/lcd.ttf") format('truetype');
+  font-style: normal;
+}
+
+// --------------------------------------------------------- THEME: DARK (default)
+:root {
+  --color-1:    #69e9f5;
+  --color-2:    #43bfc7;
+  --color-3:    #645fce;
+  --color-4:    #40356f;
+  --color-f:    #ff007b;
+  --color-t:    #1bf5af;
+
+  --bg:         #111;
+  --border:      #40356f;
+
+  --text-muted: #43bfc7;
+  --text:       #43bfc7;
+  --text-hover: #69e9f5;
+
+  --black:    #111;
+  --gray3:    #333;
+  --gray2:    #666;
+  --gray1:    #AAA;
+  --white:    #EEE;
+}
+
+// --------------------------------------------------------- THEME: LIGHT
+:root.lite-theme {
+  --color-1:  #c4bbf0;
+  --color-2:  #927fbf;
+  --color-3:  #4f3b78;
+  --color-4:  #383b4e;
+  --color-f:  #ff5d9e;
+  --color-t:  #42b883;
+
+  --bg:         #EEE;
+  --border:      #383b4e;
+
+  --text-muted: #927fbf;
+  --text:       #4f3b78;
+  --text-hover: #383b4e;
+}
+
+// --------------------------------------------------------- RESET / BASE
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg);
+}
+
+// --------------------------------------------------------- COLORS
+// NEUTRALS
+$black: #111;
+$gray3: #333;
+$gray2: #666;
+$gray1: #AAA;
+$white: #EEE;
+
+// DARK THEME
+$dark1: #69e9f5;
+$dark2: #43bfc7;
+$dark3: #645fce;
+$dark4: #40356f;
+$darkF: #ff007b;
+$darkT: #1bf5af;
+
+// LITE THEME
+$lite1: #c4bbf0;
+$lite2: #927fbf;
+$lite3: #4f3b78;
+$lite4: #383b4e;
+$liteF: #ff5d9e; 
+$liteT: #42b883;

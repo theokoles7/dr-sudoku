@@ -1,0 +1,51 @@
+@use "../../../styles.scss" as *;
+
+.algorithms {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.section-label {
+  font-family: primary;
+  font-size: 0.75em;
+  color: var(--border);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.25em;
+}
+
+.algo-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+  font-family: secondary;
+  font-size: 0.8em;
+  color: var(--text-muted);
+  transition: color 0.2s;
+
+  &.active {
+    color: var(--text-hover);
+  }
+
+  &:hover {
+    color: var(--text-hover);
+  }
+
+  input[type="radio"] {
+    appearance: none;
+    width: 0.75em;
+    height: 0.75em;
+    border: 0.1em solid var(--text-muted);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+    flex-shrink: 0;
+
+    &:checked {
+      background-color: var(--text-hover);
+    }
+  }
+}

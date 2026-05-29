@@ -1,0 +1,129 @@
+@use "../../../styles.scss" as *;
+
+div.dash-backdrop{
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+
+    div.dash-outer{
+        margin: auto;
+        margin-top: 10%;
+
+        outline: .1em solid var(--border);
+        border-radius: .5em;
+
+        transition: all 0.3s ease-in-out;
+
+        div.dash-upper{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: .25em .5em;
+            
+            border-bottom: .1em solid var(--border);
+
+            transition: all 0.3s ease-in-out;
+
+            h1.logo{
+                font-family: logo;
+                color: var(--text);
+                transition: all 0.3s ease-in-out;
+            }
+
+            button{
+                outline: none;
+                border: none;
+                background: transparent;
+                color: var(--text-muted);
+                font-family: secondary, sans-serif;
+                font-size: 1.25em;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+                    color: var(--text-hover);
+                }
+            }
+        }
+
+        div.dash-middle{
+            display: flex;
+            flex-direction: row;
+
+
+            div.dash-left{
+                display: flex;
+                flex-direction: column;
+                border-right: .1em solid var(--border);
+            }
+
+            div.dash-right{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                padding: .25em;
+            
+                border-left: .1em solid var(--border);
+            }
+        }
+
+        div.dash-lower{
+            font-family: secondary, sans-serif;
+            font-size: .75em;
+            color: var(--text-muted);
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: .25em .5em;
+
+            transition: all 0.3s ease-in-out;
+            
+            border-top: .1em solid var(--color-4);
+
+            button{
+                outline: none;
+                border: none;
+                background: transparent;
+
+                font-family: secondary, sans-serif;
+                color: var(--text-muted);
+
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                transition: color 0.3s ease-in-out;
+
+                i{
+                    margin-left: .2em;
+                    font-size: 5em;
+                }
+
+                &:hover {
+                    color: var(--text-hover);
+                }
+            }
+
+            a.fork-link {
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                transition: color 0.3s ease-in-out;
+                color: var(--text-muted);
+
+                i { margin-left: .2em; }
+
+                &:hover {
+                    color: var(--text-hover);
+                }
+            }
+        }
+    }
+}

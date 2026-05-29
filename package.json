@@ -1,6 +1,10 @@
 {
   "name": "dr-sudoku",
-  "version": "0.0.0",
+  "version": "2.0.0",
+  "fileReplacements": [],
+  "define": {
+    "APP_VERSION": "JSON.stringify(require('./package.json').version)"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -17,6 +21,7 @@
     "@angular/forms": "^21.2.0",
     "@angular/platform-browser": "^21.2.0",
     "@angular/router": "^21.2.0",
+    "@changesets/cli": "^2.31.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

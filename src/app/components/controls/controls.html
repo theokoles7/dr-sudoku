@@ -1,0 +1,89 @@
+<div class="controls">
+
+  <button class="ctrl-btn solve-btn" id="play-pause" (click)="puzzle.toggleSolving()">
+
+    <span class="tooltip">Start/Stop</span>
+
+    @if (puzzle.isSolving()) {
+      <i class="bi bi-pause-btn" id="pause" title="Pause"></i>
+    } @else {
+      <i class="bi bi-play-btn" id="play" title="Start"></i>
+    }
+
+  </button>
+  
+  <div class="speed-control ctrl-btn" title="Tempo">
+
+    <span class="tooltip">Tempo</span>
+    
+    <input
+        type="range"
+        min="50"
+        max="1000"
+        step="50"
+        [value]="puzzle.speed()"
+        (input)="puzzle.speed.set(+$any($event.target).value)"
+    />
+
+    <i class="bi bi-speedometer"></i>
+
+  </div>
+
+  <button class="ctrl-btn" id="new" (click)="puzzle.loadPuzzle()" title="New Puzzle">
+
+    <span class="tooltip">New Puzzle</span>
+
+    <i class="bi bi-plus-square"></i>
+
+  </button>
+
+  
+  <button class="ctrl-btn" id="clear" (click)="puzzle.clearPuzzle()" title="Clear">
+
+    <span class="tooltip">Clear</span>
+
+    <i class="bi bi-x-square"></i>
+
+  </button>
+
+  <button class="ctrl-btn" id="check" (click)="puzzle.checkPuzzle()" title="Check" [class.active]="puzzle.showConflicts()">
+
+    <span class="tooltip">Validate</span>
+
+    <i class="bi bi-check-square"></i>
+
+  </button>
+
+  <button class="ctrl-btn" id="edit" (click)="puzzle.toggleEditing()" title="Edit" [class.active]="puzzle.isEditing()">
+
+    <span class="tooltip">Edit</span>
+
+    <i class="bi bi-pencil-square"></i>
+
+  </button>
+
+  <button class="ctrl-btn" id="reset" (click)="puzzle.clearPuzzle()" title="Reset">
+
+    <span class="tooltip">Reset</span>
+
+    <i class="bi bi-arrow-counterclockwise"></i>
+
+  </button>
+
+  <button class="ctrl-btn" id="marks" (click)="puzzle.togglePencilMarks()" title="Pencil Marks" [class.active]="puzzle.pencilMarks()">
+
+    <span class="tooltip">Pencil Marks</span>
+
+    <i class="bi bi-123"></i>
+
+  </button>
+
+  <button class="ctrl-btn" id="help" routerLink="/help" title="Help">
+
+    <span class="tooltip">Help</span>
+
+    <i class="bi bi-question-square"></i>
+
+  </button>
+
+</div>

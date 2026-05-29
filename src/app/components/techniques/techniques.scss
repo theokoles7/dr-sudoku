@@ -1,0 +1,32 @@
+@use "../../../styles.scss" as *;
+
+.techniques {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.section-label {
+  font-family: primary, sans-serif;
+  font-size: 0.75em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--border);
+  margin-bottom: 0.25em;
+}
+
+.technique-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: secondary, sans-serif;
+  font-size: 0.8em;
+  text-align: left;
+  cursor: pointer;
+  padding: 0.1em 0;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--text-hover);
+  }
+}

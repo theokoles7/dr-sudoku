@@ -1,0 +1,15 @@
+<div class="board">
+  @for (row of puzzle.cells; track $index; let r = $index) {
+    <div class="row">
+      @for (cell of row; track $index; let c = $index) {
+        <app-cell
+          [cell]="cell()"
+          [class.no-border-top]="r === 0"
+          [class.no-border-left]="c === 0"
+          [class.no-border-bottom]="r === 8"
+          [class.no-border-right]="c === 8"
+        />
+      }
+    </div>
+  }
+</div>

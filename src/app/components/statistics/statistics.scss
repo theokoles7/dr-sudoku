@@ -1,0 +1,41 @@
+@use "../../../styles.scss" as *;
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-label {
+  font-family: primary, sans-serif;
+  font-size: 0.75em;
+  color: var(--border);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.25em;
+  transition: all 0.3s ease-in-out;
+}
+
+.stat-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+
+  .stat-label {
+    font-family: secondary, sans-serif;
+    font-size: 0.8em;
+    color: var(--text);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .stat-value {
+    font-family: secondary, sans-serif;
+    font-weight: bold;
+    color: var(--text-hover);
+    font-family: lcd;
+    transition: all 0.3s ease-in-out;
+  }
+}

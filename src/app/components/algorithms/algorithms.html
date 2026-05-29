@@ -1,0 +1,35 @@
+<div class="algorithms">
+
+  <h2 class="section-label">Algorithms</h2>
+
+  <label class="algo-option" [class.active]="puzzle.algorithm() === 'Backtrack'">
+    
+    <input type="radio" name="algorithm" value="backtrack"
+      [checked]="puzzle.algorithm() === 'Backtrack'"
+      (change)="puzzle.setAlgorithm('Backtrack')" />
+
+    <span>Backtrack</span>
+
+  </label>
+
+  <label class="algo-option" [class.active]="puzzle.algorithm() === 'Enhanced'">
+
+    <input type="radio" name="algorithm" value="enhanced"
+      [checked]="puzzle.algorithm() === 'Enhanced'"
+      (change)="puzzle.setAlgorithm('Enhanced')" />
+
+    <span>Enhanced Backtrack</span>
+
+  </label>
+
+  <label class="algo-option" [class.active]="puzzle.algorithm() === 'Heuristic'">
+
+    <input type="radio" name="algorithm" value="heuristic"
+      [checked]="puzzle.algorithm() === 'Heuristic'"
+      (change)="puzzle.setAlgorithm('Heuristic')" />
+
+    <span>Meta-Heuristic</span>
+
+  </label>
+
+</div>

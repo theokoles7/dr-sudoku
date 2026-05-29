@@ -1,0 +1,59 @@
+<div class="dash-backdrop">
+
+    <div class="dash-outer">
+
+        <div class="dash-upper">
+
+            <h1 class="logo">Dr. Sudoku</h1>
+
+            <button class="theme-btn" (click)="themeService.toggle()">
+
+                <i class="bi" [class.bi-brightness-high-fill]="themeService.theme() === 'dark'"
+                            [class.bi-moon-fill]="themeService.theme() === 'lite'"></i>
+            </button>
+
+        </div>
+
+        <div class="dash-middle">
+
+            <div class="dash-left">
+
+                <app-controls></app-controls>
+
+            </div>
+
+            <div class="dash-center">
+
+                <app-grid></app-grid>
+
+            </div>
+
+            <div class="dash-right">
+
+                <app-statistics></app-statistics>
+
+                <app-algorithms></app-algorithms>
+
+                <app-techniques></app-techniques>
+
+            </div>
+
+        </div>
+
+        <div class="dash-lower">
+
+            <button class="license-link" routerLink="license">
+                Copyright © 2026 Gabriel C. Trahan
+            </button>
+
+            <p class="app-version">v{{ version }}</p>
+
+            <a class="fork-link" href="https://github.com/theokoles7/dr-sudoku" target="_blank">
+                Fork me: <i class="bi bi-github"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>

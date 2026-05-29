@@ -1,0 +1,66 @@
+@use "../../../styles.scss" as *;
+
+:host {
+  display: contents;
+}
+
+// Edge border removal
+:host(:first-child)              .cell { border-left:   none; }
+:host(:last-child)               .cell { border-right:  none; }
+:host-context(.row:first-child)  .cell { border-top:    none; }
+:host-context(.row:last-child)   .cell { border-bottom: none; }
+
+.cell {
+  width: 3.5em;
+  height: 3.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.05em solid var(--border);
+  cursor: default;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+
+  &.visited { background-color: var(--color-success); }
+  &.current { background-color: var(--color-focus); }
+
+  .value {
+    font-family: lcd;
+    font-size: 3em;
+    color: var(--text-muted);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.given .value {
+    color: var(--text-hover);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .pencil-marks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    transition: all 0.3s ease-in-out;
+
+    .mark {
+      font-family: lcd;
+      font-size: 0.45em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: transparent;
+      transition: all 0.3s ease-in-out;
+      
+      &.visible {
+        color: var(--text-muted);
+      }
+    }
+  }
+
+  &:hover {
+    background: var(--color-accent1);
+  }
+}

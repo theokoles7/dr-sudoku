@@ -1,0 +1,30 @@
+<div class="statistics">
+
+  <h2 class="section-label">Statistics</h2>
+
+  <div class="stat-row">
+    <span class="stat-label">Difficulty</span>
+    <span class="stat-value">{{ puzzle.difficulty() }}</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">Time</span>
+    <span class="stat-value lcd">{{ formatTime(puzzle.time()) }}</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">Considered</span>
+    <span class="stat-value lcd">{{ puzzle.considered() }}</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">Guesses</span>
+    <span class="stat-value lcd">{{ puzzle.guesses() }}</span>
+  </div>
+
+  <div class="stat-row">
+    <span class="stat-label">Backtracks</span>
+    <span class="stat-value lcd">{{ puzzle.backtracks() }}</span>
+  </div>
+
+</div>

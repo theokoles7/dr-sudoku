@@ -1,0 +1,32 @@
+@use "../../../styles.scss" as *;
+
+.board {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  // Remove top border from all cells in the first row
+  &:first-child app-cell .cell {
+    border-top: none;
+  }
+
+  // Remove bottom border from all cells in the last row
+  &:last-child app-cell .cell {
+    border-bottom: none;
+  }
+}
+
+// Remove left border from first cell in every row
+app-cell:first-child .cell {
+  border-left: none;
+}
+
+// Remove right border from last cell in every row
+app-cell:last-child .cell {
+  border-right: none;
+}

@@ -1,0 +1,27 @@
+<div class="cell" [class.given]="cell().given"
+  [class.visited]="cell().visited"
+  [class.current]="cell().current">
+  
+  @if (cell().value !== 0) {
+
+    <span class="value">{{ cell().value }}</span>
+
+  } @else {
+
+    <div class="pencil-marks">
+
+      @for (mark of cell().pencil_marks; track $index; let i = $index) {
+
+        <span class="mark" [class.visible]="mark">
+
+          {{ i + 1 }}
+
+        </span>
+
+      }
+
+    </div>
+    
+  }
+
+</div>
