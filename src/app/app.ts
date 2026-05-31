@@ -10,7 +10,7 @@ import { Puzzle } from './services/puzzle';
   templateUrl:  './app.html',
   styleUrl:     './app.scss'
 })
-export class App {
+export class App implements OnInit {
   protected readonly title = signal('dr-sudoku');
   private sudokuService = inject(Puzzle);
 

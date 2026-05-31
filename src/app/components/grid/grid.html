@@ -4,10 +4,8 @@
       @for (cell of row; track $index; let c = $index) {
         <app-cell
           [cell]="cell()"
-          [class.no-border-top]="r === 0"
-          [class.no-border-left]="c === 0"
-          [class.no-border-bottom]="r === 8"
-          [class.no-border-right]="c === 8"
+          [class.box-right]="c === 2 || c === 5"
+          [class.box-bottom]="r === 2 || r === 5"
         />
       }
     </div>

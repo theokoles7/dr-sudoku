@@ -6,7 +6,9 @@ import { Puzzle }             from '../../services/puzzle';
 
 @Component({
   selector:     'app-controls',
-  imports:      [],
+  imports:      [
+                  RouterLink,
+                ],
   templateUrl:  './controls.html',
   styleUrl:     './controls.scss',
 })
